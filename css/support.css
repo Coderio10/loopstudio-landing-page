@@ -74,6 +74,7 @@ h3{
 .form #submit{
     font-family: var(--Family2);
     padding: 10px 30px;
+    height: 40px;
     border-radius: 5px;
     background-color: var(--Black);
     color: var(--White);
