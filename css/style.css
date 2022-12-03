@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    /* color */
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --DarkGray: hsl(0, 0%, 55%);
+    --VeryDarkGray: hsl(0, 0%, 41%);
+    /* FONT FAMILY */
+    --Family1: "Alata", Sans-serif;
+    --Family2: "Josefin Sans", Sans-serif;
+}
+/* header starts */
+header{
+    background: url(../images/desktop/image-hero.jpg);
+    min-height: 85vh;
+    color: var(--White);
+}
+/* nav */
+nav{
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* nav links */
+nav .link{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+nav .link li a{
+    font-family: var(--Family1);
+    transition: all 0.3s ease;
+    color: var(--White);
+    cursor: pointer;
+    padding: 5px;
+}
+nav .link li a:hover{
+    text-shadow: 2px 5px 5px purple;
+    cursor: pointer;
+}
+/* hamburger */
+.hamburger{
+    cursor: pointer;
+    display: none;
+}
+.hamburger .bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background-color: white; 
+}
+/* herosection text */
+header .hero-text h1{
+    margin-top: 50px;
+    border: 2px solid var(--White);
+    width: 500px;
+    padding: 20px;
+    margin-left: 100px;
+    font-family: var(--Family2);
+    font-weight: 300;
+    font-size: 64px;
+    text-transform: uppercase;
+}
+/* header ends */
+/* first section */
+.first-section{
+    padding: 100px 100px;
+    padding-bottom: 400px;
+}
+/* first section - column one */
+.first-section .col-1{
+    width: 60%;
+    margin-bottom: -80px;
+}
+/* first section - column two */
+.first-section .col-2{
+    width: 50%;
+    float: right;
+    margin-top: -100px;
+    background-color: var(--White);
+    padding: 80px 50px;
+    position: relative;
+    z-index: 1000000000000000000000000001;
+}
+.first-section .col-2 h2{
+    font-family: var(--Family2);
+    font-weight: 300;
+    font-size: 42px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+.first-section .col-2 p{
+    font-family: var(--Family1);
+    font-size: 14px;
+}
+.first-section .d-img{
+    width: 100%;
+    display: block;
+}
+/* section 2 */
+.section-2{
+    display: flex;
+    padding: 20px 100px;
+    justify-content: space-between; 
+}
+.section-2 h2{
+    color: var(--Black);
+    font-family: var(--Family2);
+    font-weight: 300;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+.section-2 button{
+    background-color: var(--White);
+    color: var(--Black);
+    padding: 10px 30px;
+    border: 2px solid var(--Black);
+    font-family: var(--Family2);
+    text-transform: uppercase;
+    font-size: 16px;
+} 
+.section-2 button:hover{
+    background-color: var(--Black);
+    color: var(--White);
+} 
+/* grid-section */
+.grid-section{
+    display: grid;
+    margin: 100px auto;
+    margin-top: 0;
+    padding-top: 40px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 82%;
+}
+.grid-section span{
+    position: relative;
+}
+.grid-section .d-img{
+    width: 250px;
+}
+.grid-section h3{
+    position: absolute;
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.619), rgba(0, 0, 0, 0.09));
+    bottom: 15px;
+    left: 16px;
+    right: 15px;
+    color: var(--White);
+    font-family: var(--Family2);
+    font-weight: 300;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+.grid-section span .text{
+    right: 50px;
+}
+.grid-section span .txt{
+    right: 100px;
+}
+.mob-btn{
+    display: none;
+}
+/* Hide mobile images */
+.m-img{
+    display: none;
+}
+/* footer */
+footer{
+    background-color: var(--Black);
+    font-family: var(--Family1);
+    color: var(--White);
+}
+footer div:first-child{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 100px;
+    line-height: 30px;
+}
+footer h2{
+    font-size: 32px;
+    padding-bottom: 10px;
+}
+footer ul{
+    display: flex;
+    gap: 10px;
+}
+footer li a{
+    font-family: var(--Family1);
+    transition: all 0.3s ease;
+    color: var(--White);
+    cursor: pointer;
+    padding: 5px;
+}
+footer li a:hover{
+    color: purple;
+    cursor: pointer;
+}
+.attribution { 
+    font-size: 16px; 
+    text-align: center; 
+}
+.attribution a{ 
+    color: purple;
+    text-decoration: none;
+}
+.attribution a:hover{
+    font-weight: 600;
+    cursor: pointer;
+}

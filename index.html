@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+  <title>Frontend Mentor | Loopstudios landing page</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html"><img src="./images/logo.svg" alt="logo"></a>
+      </div>
+      <ul class="link">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    </nav>
+    <section class="hero-text">
+      <h1>Immersive experiences that deliver</h1>
+    </section>
+  </header>
+  <main>
+    <section class="first-section">
+      <div class="col-1">
+        <img class="d-img" src="./images/desktop/image-interactive.jpg" alt="image-interactive">
+        <img class="m-img" src="./images/mobile/image-interactive.jpg" alt="image-interactive">
+      </div>
+      <div class="col-2">
+        <h2>The leader in interactive VR</h2>
+        <p>Founded in 2011, Loopstudios has been producing world-class virtual reality 
+          projects for some of the best companies around the globe. Our award-winning 
+          creations have transformed businesses through digital experiences that bind 
+          to their brand.</p>
+      </div>
+    </section>
+    <section class="section-2">
+        <h2>Our creations</h2>
+        <button>See all</button>
+    </section>
+    <section class="grid-section">
+      <span>
+        <img class="d-img" src="./images/desktop/image-deep-earth.jpg" alt="image-deep-earth">
+        <img class="m-img" src="./images/mobile/image-deep-earth.jpg" alt="image-deep-earth">
+        <h3 class="text">Deep earth</h3>
+      </span>
+      <span>
+        <img class="d-img" src="./images/desktop/image-night-arcade.jpg" alt="image-night-arcade">
+        <img class="m-img" src="./images/mobile/image-night-arcade.jpg" alt="image-night-arcade">
+        <h3>Night arcade</h3>
+      </span>
+      <span>
+        <img class="d-img" src="./images/desktop/image-soccer-team.jpg" alt="image-soccer-team">
+        <img class="m-img" src="./images/mobile/image-soccer-team.jpg" alt="image-soccer-team">
+        <h3>Soccer team VR</h3>
+      </span>
+      <span>
+        <img class="d-img" src="./images/desktop/image-grid.jpg" alt="image-grid">
+        <img class="m-img" src="./images/mobile/image-grid.jpg" alt="image-grid">
+        <h3 class="txt">The Grid</h3>
+      </span>
+      <span>
+        <img class="d-img" src="./images/desktop/image-from-above.jpg" alt="image-from-above">
+        <img class="m-img" src="./images/mobile/image-from-above.jpg" alt="image-from-above">
+        <h3>From Up Above VR</h3>
+      </span>
+      <span>
+        <img class="d-img" src="./images/desktop/image-pocket-borealis.jpg" alt="image-pocket-borealis">
+        <img class="m-img" src="./images/mobile/image-pocket-borealis.jpg" alt="image-pocket-borealis">
+        <h3>Pocket borealis</h3>
+      </span>
+      <span>
+        <img class="d-img" src="./images/desktop/image-curiosity.jpg" alt="image-curiosity">
+        <img class="m-img" src="./images/mobile/image-curiosity.jpg" alt="image-curiosity">
+        <h3>The curiosity</h3>
+      </span>
+      <span>
+        <img class="d-img" src="./images/desktop/image-fisheye.jpg" alt="image-fisheye">
+        <img class="m-img" src="./images/mobile/image-fisheye.jpg" alt="image-fisheye">
+        <h3>Make it fisheye</h3>
+      </span>
+    </section>
+    <div class="mob-btn"  >
+      <button>See all</button>
+    </div>
+  </main>  
+  <footer>
+    <div>
+      <section>
+        <h2>Loopstudios</h2>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </section>
+      <section>
+        <span>
+          <img src="./images/icon-facebook.svg" alt="icon-facebook">
+          <img src="./images/icon-twitter.svg" alt="icon-twitter">
+          <img src="./images/icon-pinterest.svg" alt="icon-pinterest">
+          <img src="./images/icon-instagram.svg" alt="icon-instagram">
+        </span>
+        <p>© 2021 Loopstudios. All rights reserved.</p>
+      </section>
+    </div>
+    <div class="attribution"> 
+      Coded by <a href="">Code RIO</a>.
+    </div>
+  </footer>
+</body>
+  <script>
+    let hamburger = document.querySelector(".hamburger");
+    let navmenu   = document.querySelector(".link");
+
+    hamburger.addEventListener("click", ()=> {
+      hamburger.classList.toggle("active");
+      navmenu.classList.toggle("active");
+    });
+
+    document.querySelectorAll("li").forEach(n =>
+        n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navmenu.classList.remove("active")
+        })
+    )
+  </script>
+</html>

@@ -1,0 +1,199 @@
+/* Responsive header */
+@media (max-width:850px) {  
+    /* Responsive header */
+    nav{
+        padding: 50px 30px;
+        align-items: center;
+    } 
+}     
+@media (max-width:700px){
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    nav .link{
+        position: fixed;
+        top: -100%;
+        gap: 0;
+        flex-direction: column;
+        background-color: var(--Black);
+        width: 80%;
+        text-align: center;
+        transition: all 0.3s ease;
+        padding: 30px;
+        z-index: 100000000000000000000000000000001;
+    }
+    .link li{
+        line-height: 50px;
+        font-family: var(--Family2);
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    nav .link.active{
+        top: 110px;
+    }
+    nav .link li{
+        font-size: 1.2rem;
+    }
+}   
+/* Grid section responsive */
+@media (max-width:1000px) {
+    .grid-section{
+        display: grid;
+        margin: 10px auto;
+        /* padding: 100px 0; */
+        padding: 10%;
+        padding-top: 40px;
+        grid-template-columns: repeat(2, 3fr);
+        gap: 10px;
+        width: 80%;
+    }
+    .section-2 h2{
+        font-size: 2rem;
+    }
+}
+@media (max-width:680px) {
+    /* herosection text */
+    header .hero-text h1{
+        width: 80%;
+        padding: 20px;
+        margin: 10px auto;
+        margin-top: 50px;
+        border: 2px solid var(--White);
+        font-weight: 300;
+        font-size: 3rem;
+    }
+    .first-section .col-2 h2{
+        font-size: 32px;  
+    }
+}  
+@media (max-width:450px) {
+    /* herosection text */
+    header .hero-text h1{
+        width: 90%;
+        padding: 10px;
+        font-size: 2.5rem;
+    }
+    .first-section .col-2 h2{
+        font-size: 32px;  
+    }
+}     
+@media (max-width:350px) {
+    /* herosection text */
+    header .hero-text h1{
+        width: 90%;
+        padding: 10px;
+        font-size: 2rem;
+    }
+    nav{
+        padding: 50px 15px;
+    } 
+}         
+@media (max-width:900px) {   
+    /* first section responsiveness */
+    .first-section{
+        padding: 70px 20px;
+        padding-bottom: 50px;
+        text-align: center;
+    }
+    .first-section .col-2{
+        width: 100%;
+        float: none;
+        margin-top: 0px;    
+        padding: 20px;
+        position: relative;
+    }
+    /* first section - column one */
+    .first-section .col-1{
+        width: 100%;
+        margin-bottom: -80px;
+    }
+    .first-section .d-img{
+        display: none;
+    }
+    .m-img{
+        display: block;
+        width: 100%;
+    }
+    .d-img{
+        display: none;
+    }
+    /* section two */
+    .section-2{
+        display: flex;
+        padding: 10px;
+        padding-bottom: 0;
+        flex-flow: column;
+        text-align: center;
+    }
+    .section-2 h2{
+        font-size: 32px;
+    }
+    .section-2 button{
+        display: none;
+    }
+    /* grid section */
+    .grid-section{
+        margin: 0px auto;
+        gap: 15px;
+        padding: 5%;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+    }
+    .grid-section span{
+        position: relative;
+    }
+    .grid-section h3{
+        font-size: 32px;
+    }
+    .grid-section span .text{
+        right: 0px;
+    }
+    .grid-section span .txt{
+        right: 0px;
+    }
+    /* Grid button */
+    .mob-btn{
+        display: block;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+    .mob-btn button{
+        background-color: var(--White);
+        color: var(--Black);
+        padding: 10px 30px;
+        border: 2px solid var(--Black);
+        font-family: var(--Family2);
+        text-transform: uppercase;
+        font-size: 16px;
+    } 
+    .mob-btn button:hover{
+        background-color: var(--Black);
+        color: var(--White);
+    } 
+/* footer responsiveness */
+    footer div:first-child{
+        display: block;
+        text-align: center;
+        padding: 50px 20px;
+        line-height: 30px;
+    }
+    footer section{ 
+        display: block;
+    }
+    footer ul{
+        display: block;  
+    }
+    footer li, footer h2{
+        padding-bottom: 5px;
+    }
+}
+

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+  <link rel="stylesheet" href="./css/support.css">
+  <title>Frontend Mentor | Loopstudios landing page</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html"><img src="./images/logo.svg" alt="logo"></a>
+      </div>
+      <ul class="link">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    </nav>
+    <section class="hero-text">
+      <h1>Immersive experiences that deliver</h1>
+    </section>
+  </header>
+  <main>
+    <section class="contact">
+      <h2>We offer free support, just contact us</h2>
+      <p><b>E-mail: </b>loopstudios@gmail.com</p>
+      <p><b>Phone: </b>+2347068797000</p>     
+      <div>
+        <h3>Subscribe for our lastest updates </h3>
+        <p>Your privacy is out major piority. We promise not to spam you.</p>
+        <form name="form" class="form" onsubmit="return validateForm()" method="post">
+          <div>
+            <label for="input">Email</label>
+            <input type="email" name="input" placeholder="Enter your email address here.." id="input">
+            <div class="error" id="error"></div>
+          </div>
+          <input type="submit" id="submit" value="Subscribe">
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div>
+      <section>
+        <h2>Loopstudios</h2>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </section>
+      <section>
+        <span>
+          <img src="./images/icon-facebook.svg" alt="icon-facebook">
+          <img src="./images/icon-twitter.svg" alt="icon-twitter">
+          <img src="./images/icon-pinterest.svg" alt="icon-pinterest">
+          <img src="./images/icon-instagram.svg" alt="icon-instagram">
+        </span>
+        <p>© 2021 Loopstudios. All rights reserved.</p>
+      </section>
+    </div>
+    <div class="attribution"> 
+      Coded by <a href="#">Code RIO</a>.
+    </div>
+  </footer>
+</body>
+<script>
+    //Function to display error message
+  function printError(elemId, hintMsg){
+    document.getElementById(elemId).innerHTML = hintMsg;
+  }
+
+  // validiating form
+  function validateForm(){
+    var input = document.form.input.value;
+    // Defining error variables with a default value
+   var error = true;
+    // validate email address
+    if(input == "") {
+      printError("error", "Enter your Email address");
+    }else{
+      // Regular expression for basic email validation
+      var regex = /^\S+@\S+\.\S+$/;
+      if(regex.test(input) === false){
+        printError("error", "Enter a Valid Email address");
+      }else{
+        printError("error", "");
+        error = false;
+      }   
+    }
+    // Prevent the form from being submitted if there any errors
+    if ((error) == true) {
+      return false;
+    }else{
+      alert(input +" "+"is Saved!, Follow me on facebook @code rio");
+      return false;
+    }
+  };
+
+  // Responve header codes
+    let hamburger = document.querySelector(".hamburger");
+    let navmenu   = document.querySelector(".link");
+
+    hamburger.addEventListener("click", ()=> {
+      hamburger.classList.toggle("active");
+      navmenu.classList.toggle("active");
+    });
+
+    document.querySelectorAll("li").forEach(n =>
+        n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navmenu.classList.remove("active")
+        })
+    )
+  </script>
+</html>  

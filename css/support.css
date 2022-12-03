@@ -1,0 +1,104 @@
+:root{
+    /* color */
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --DarkGray: hsl(0, 0%, 55%);
+    --VeryDarkGray: hsl(0, 0%, 41%);
+    /* FONT FAMILY */
+    --Family1: "Alata", Sans-serif;
+    --Family2: "Josefin Sans", Sans-serif;
+}
+/* contact section */
+.contact{
+    padding: 50px 20px;
+    text-align: center;
+}
+.contact h2{
+    font-size: 46px;
+    text-align: center;
+    font-family: var(--Family2);
+    font-weight: 600;
+    margin: 30px 0px;
+    text-shadow: 2px  -10px 5px purple;
+    text-transform: capitalize;
+}
+.contact p{
+    font-family: var(--Family1);
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+.contact .span_element{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: var(--White);
+    width: 250px;
+    display: block;
+    margin: 20px auto;
+    background-color: var(--Black);
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+.contact .span_element a{
+    margin: 5px;
+}
+/* Newsletter form */
+.form{
+    padding: 3px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+h3{
+    font-size: 28px;
+    text-align: center;
+    font-family: var(--Family2);
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 50px 0px 10px 0px;
+    text-shadow: 2px -10px 5px purple;
+}
+.form label{
+    display: none;
+}
+.form #input{
+    border: 2px solid var(--Black);
+    border-radius: 5px;
+    padding: 2px 5px;
+    font-family: var(--Family1);
+    height: 40px;
+    width: 250px;
+}
+.form #submit{
+    font-family: var(--Family2);
+    padding: 10px 30px;
+    border-radius: 5px;
+    background-color: var(--Black);
+    color: var(--White);
+    font-size: 17px;
+    cursor: pointer;
+}
+.form #submit:hover{
+    opacity: 0.9;
+}
+.error{
+    color: red;
+    font-family: var(--Family1);
+
+}
+@media (max-width:460px) {
+   p{
+    font-size: 16px;
+   } 
+   h2{
+    font-size: 28px;
+   }
+   .form{
+        flex-direction: column;
+    }
+   .form #input{
+        width: 100%;
+    }
+}
